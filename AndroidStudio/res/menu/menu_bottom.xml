@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/main_menu"
+        app:showAsAction="always"
+        android:text="메인"
+        android:icon="@drawable/home"
+        android:enabled="true"
+        android:checked="true"
+        android:title="메인"/>
+
+    <item
+        android:id="@+id/news_menu"
+        app:showAsAction="always"
+        android:text="뉴스"
+        android:icon="@drawable/article"
+        android:enabled="true"
+        android:title="뉴스"/>
+
+    <item
+        android:id="@+id/list_menu"
+        app:showAsAction="always"
+        android:text="종목"
+        android:icon="@drawable/chart"
+        android:enabled="true"
+        android:title="종목"/>
+
+    <item
+        android:id="@+id/my_menu"
+        app:showAsAction="always"
+        android:text="MY"
+        android:icon="@drawable/person"
+        android:enabled="true"
+        android:title="MY"/>
+</menu>

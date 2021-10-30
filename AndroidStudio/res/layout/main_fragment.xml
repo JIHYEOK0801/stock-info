@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="KOSPI 지수"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="10dp"/>
+
+        <TextView
+            android:id="@+id/show_predict"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:layout_marginLeft="20dp"/>
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/chart"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginBottom="10dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="세계 주가 지수"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="10dp"/>
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:columnCount="3"
+            android:rowCount="8"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginHorizontal="10dp">
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_gravity="fill_vertical"
+                android:gravity="center"
+                android:layout_rowSpan="3"
+                android:paddingHorizontal="20dp"
+                android:background = "@drawable/edge"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:text="미국" />
+
+            <TextView
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:paddingVertical="4dp"
+                android:gravity="center"
+                android:background = "@drawable/edge"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:text="NDAQ" />
+
+            <TextView
+                android:id="@+id/ndaq_value"
+                android:layout_height="wrap_content"
+                android:paddingVertical="4dp"
+                android:layout_gravity="fill_horizontal"
+                android:gravity="right"
+                android:paddingRight = "20dp"
+                android:background = "@drawable/edge"
+                android:textColor="@color/black"
+                android:textSize="20dp"/>
+
+            <TextView
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:paddingVertical="4dp"
+                android:gravity="center"
+                android:background = "@drawable/edge"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:text="SPY" />
+
+            <TextView
+                android:id="@+id/spy_value"
+                android:layout_height="wrap_content"
+                android:paddingVertical="4dp"
+                android:layout_gravity="fill_horizontal"
+                android:gravity="right"
+                android:paddingRight = "20dp"
+                android:background = "@drawable/edge"
+                android:textColor="@color/black"
+                android:textSize="20dp"/>
+
+            <TextView
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:paddingVertical="4dp"
+                android:gravity="center"
+                android:background = "@drawable/edge"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:text="DJI" />
+
+            <TextView
+                android:id="@+id/dji_value"
+                android:layout_height="wrap_content"
+                android:paddingVertical="4dp"
+                android:layout_gravity="fill_horizontal"
+                android:gravity="right"
+                android:paddingRight = "20dp"
+                android:background = "@drawable/edge"
+                android:textColor="@color/black"
+                android:textSize="20dp"/>
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_gravity="fill_vertical"
+                android:gravity="center"
+                android:paddingHorizontal="20dp"
+                android:background = "@drawable/edge"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:text="유럽" />
+
+            <TextView
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:paddingVertical="4dp"
+                android:gravity="center"
+                android:background = "@drawable/edge"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:text="STOXX50" />
+
+            <TextView
+                android:id="@+id/stoxx50_value"
+                android:layout_height="wrap_content"
+                android:paddingVertical="4dp"
+                android:layout_gravity="fill_horizontal"
+                android:gravity="right"
+                android:paddingRight = "20dp"
+                android:background = "@drawable/edge"
+                android:textColor="@color/black"
+                android:textSize="20dp"/>
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_gravity="fill_vertical"
+                android:gravity="center"
+                android:layout_rowSpan="2"
+                android:paddingHorizontal="20dp"
+                android:background = "@drawable/edge"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:text="일본" />
+
+            <TextView
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:paddingVertical="4dp"
+                android:gravity="center"
+                android:background = "@drawable/edge"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:text="TOPIX" />
+
+            <TextView
+                android:id="@+id/topix_value"
+                android:layout_height="wrap_content"
+                android:paddingVertical="4dp"
+                android:layout_gravity="fill_horizontal"
+                android:gravity="right"
+                android:paddingRight = "20dp"
+                android:background = "@drawable/edge"
+                android:textColor="@color/black"
+                android:textSize="20dp"/>
+
+            <TextView
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:paddingVertical="4dp"
+                android:gravity="center"
+                android:background = "@drawable/edge"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:text="NIKKEI" />
+
+            <TextView
+                android:id="@+id/nikkei_value"
+                android:layout_height="wrap_content"
+                android:paddingVertical="4dp"
+                android:layout_gravity="fill_horizontal"
+                android:gravity="right"
+                android:paddingRight = "20dp"
+                android:background = "@drawable/edge"
+                android:textColor="@color/black"
+                android:textSize="20dp"/>
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_gravity="fill_vertical"
+                android:gravity="center"
+                android:paddingHorizontal="20dp"
+                android:background = "@drawable/edge"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:text="중국" />
+
+            <TextView
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:paddingVertical="4dp"
+                android:gravity="center"
+                android:background = "@drawable/edge"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:text="SSEC" />
+
+            <TextView
+                android:id="@+id/ssec_value"
+                android:layout_height="wrap_content"
+                android:paddingVertical="4dp"
+                android:layout_gravity="fill_horizontal"
+                android:gravity="right"
+                android:paddingRight = "20dp"
+                android:background = "@drawable/edge"
+                android:textColor="@color/black"
+                android:textSize="20dp"/>
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edge"
+                android:gravity="center"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="4dp"
+                android:text="홍콩"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <TextView
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:paddingVertical="4dp"
+                android:gravity="center"
+                android:background = "@drawable/edge"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:text="HSI" />
+
+            <TextView
+                android:id="@+id/hsi_value"
+                android:layout_height="wrap_content"
+                android:paddingVertical="4dp"
+                android:layout_gravity="fill_horizontal"
+                android:gravity="right"
+                android:paddingRight = "20dp"
+                android:background = "@drawable/edge"
+                android:textColor="@color/black"
+                android:textSize="20dp"/>
+        </GridLayout>
+    </LinearLayout>
+</LinearLayout>

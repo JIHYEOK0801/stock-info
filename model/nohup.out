@@ -1,0 +1,526 @@
+------------------------------------------------------------------------------
+<-----crawling.py import complete------------------>
+<-----isHoliday.py import complete----------------->
+<-----use_ecos.py import complete----------------->
+<-----fb_dailyupdate.py import complete----------->
+Traceback (most recent call last):
+  File "scheduler.py", line 11, in <module>
+    import fb
+  File "/home/ubuntu/model/fb.py", line 13, in <module>
+    cred = credentials.Certificate("C:\\Users\\wkdwl\\Desktop\\JH\\code\\.vscode\\team1-1a267-firebase-adminsdk-v9932-63d62a617d.json")
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/firebase_admin/credentials.py", line 83, in __init__
+    with open(cert) as json_file:
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\wkdwl\\Desktop\\JH\\code\\.vscode\\team1-1a267-firebase-adminsdk-v9932-63d62a617d.json'
+------------------------------------------------------------------------------
+<-----crawling.py import complete------------------>
+<-----isHoliday.py import complete----------------->
+<-----use_ecos.py import complete----------------->
+<-----fb_dailyupdate.py import complete----------->
+<-----firebase 권한획득완료-------------------------->
+<-----kospidetail.py import complete--------------->
+<-----model.py import complete----------->
+<-----All File import complete------------------------------->
+2021-06-04
+<-----dataset 완료------------------------------>
+Traceback (most recent call last):
+  File "scheduler.py", line 149, in <module>
+    schedule.every().saturday.at("03:00").do(runmodel())
+  File "scheduler.py", line 135, in runmodel
+    predict_kospi = model.run(data)
+  File "/home/ubuntu/model/model.py", line 61, in run
+    model = load_model(dir)  #저장했던 모델 (dir에 있는거) 불러오는 코드
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/tensorflow/python/keras/saving/save.py", line 211, in load_model
+    loader_impl.parse_saved_model(filepath)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/tensorflow/python/saved_model/loader_impl.py", line 114, in parse_saved_model
+    constants.SAVED_MODEL_FILENAME_PB))
+OSError: SavedModel file does not exist at: ~\model/75_LSTM.h5/{saved_model.pbtxt|saved_model.pb}
+------------------------------------------------------------------------------
+<-----crawling.py import complete------------------>
+<-----isHoliday.py import complete----------------->
+<-----use_ecos.py import complete----------------->
+<-----fb_dailyupdate.py import complete----------->
+<-----firebase 권한획득완료-------------------------->
+<-----kospidetail.py import complete--------------->
+<-----model.py import complete----------->
+<-----All File import complete------------------------------->
+2021-06-04
+<-----dataset 완료------------------------------>
+Traceback (most recent call last):
+  File "scheduler.py", line 149, in <module>
+    schedule.every().saturday.at("03:00").do(runmodel())
+  File "scheduler.py", line 135, in runmodel
+    predict_kospi = model.run(data)
+  File "/home/ubuntu/model/model.py", line 61, in run
+    model = load_model(dir)  #저장했던 모델 (dir에 있는거) 불러오는 코드
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/tensorflow/python/keras/saving/save.py", line 211, in load_model
+    loader_impl.parse_saved_model(filepath)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/tensorflow/python/saved_model/loader_impl.py", line 114, in parse_saved_model
+    constants.SAVED_MODEL_FILENAME_PB))
+OSError: SavedModel file does not exist at: ~/model/75_LSTM.h5/{saved_model.pbtxt|saved_model.pb}
+------------------------------------------------------------------------------
+<-----crawling.py import complete------------------>
+<-----isHoliday.py import complete----------------->
+<-----use_ecos.py import complete----------------->
+<-----fb_dailyupdate.py import complete----------->
+<-----firebase 권한획득완료-------------------------->
+<-----kospidetail.py import complete--------------->
+<-----model.py import complete----------->
+<-----All File import complete------------------------------->
+2021-06-04
+<-----dataset 완료------------------------------>
+2021-06-04 16:46:27.025075: I tensorflow/compiler/jit/xla_cpu_device.cc:41] Not creating XLA devices, tf_xla_enable_xla_devices not set
+model 불러오기 완료
+2021-06-04 16:46:27.894404: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:116] None of the MLIR optimization passes are enabled (registered 2)
+2021-06-04 16:46:27.915329: I tensorflow/core/platform/profile_utils/cpu_utils.cc:112] CPU Frequency: 2300080000 Hz
+/home/ubuntu/.local/lib/python3.6/site-packages/pandas/core/indexing.py:670: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  iloc._setitem_with_indexer(indexer, value)
+/home/ubuntu/model/model.py:80: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df['after4days_close'].iloc[i+20] = my_final_y_pred[0][0]
+함수실행
+어제 코스피 값은  3247.43
+예측한 5일 후의 코스피 값은 3169.7708
+<-----modelrun 완료------------------------------>
+Traceback (most recent call last):
+  File "scheduler.py", line 149, in <module>
+    schedule.every().saturday.at("03:00").do(runmodel())
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/schedule/__init__.py", line 625, in do
+    self.job_func = functools.partial(job_func, *args, **kwargs)
+TypeError: the first argument must be callable
+------------------------------------------------------------------------------
+<-----crawling.py import complete------------------>
+<-----isHoliday.py import complete----------------->
+<-----use_ecos.py import complete----------------->
+<-----fb_dailyupdate.py import complete----------->
+<-----firebase 권한획득완료-------------------------->
+<-----kospidetail.py import complete--------------->
+<-----model.py import complete----------->
+<-----All File import complete------------------------------->
+2021-06-04
+<-----시고저종거래량 업데이트중------------------->
+<-----대비,등락률 업데이트중------------------------>
+<-----순매수 업데이트중----------------------------->
+<-----각국 지수 업데이트중-------------------------->
+<-----유가 업데이트중-------------------------------->
+<-----firebase 2차 갱신중----------------------------->
+<-----firebase 2차 갱신완료--------------------------->
+<-----금일 update 완료------------------------------>
+<-----dataset 완료------------------------------>
+2021-06-05 03:00:01.230284: I tensorflow/compiler/jit/xla_cpu_device.cc:41] Not creating XLA devices, tf_xla_enable_xla_devices not set
+model 불러오기 완료
+2021-06-05 03:00:01.942182: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:116] None of the MLIR optimization passes are enabled (registered 2)
+2021-06-05 03:00:01.942614: I tensorflow/core/platform/profile_utils/cpu_utils.cc:112] CPU Frequency: 2300080000 Hz
+/home/ubuntu/.local/lib/python3.6/site-packages/pandas/core/indexing.py:670: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  iloc._setitem_with_indexer(indexer, value)
+/home/ubuntu/model/model.py:80: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df['after4days_close'].iloc[i+20] = my_final_y_pred[0][0]
+함수실행
+어제 코스피 값은  3240.08
+예측한 5일 후의 코스피 값은 3172.4417
+<-----modelrun 완료------------------------------>
+2021-06-07
+<-----환율 업데이트중-------------------------------->
+<-----firebase 1차 갱신중----------------------------->
+<-----firebase 1차 갱신완료-------------------------->
+<-----환율 업데이트 완료---------------------------->
+<-----안드로이드차트용 kospi지수 갱신중----------->
+<-----안드로이드차트용 kospi지수 갱신완료--------->
+<-----시고저종거래량 업데이트중------------------->
+<-----대비,등락률 업데이트중------------------------>
+<-----순매수 업데이트중----------------------------->
+<-----각국 지수 업데이트중-------------------------->
+<-----유가 업데이트중-------------------------------->
+<-----firebase 2차 갱신중----------------------------->
+<-----firebase 2차 갱신완료--------------------------->
+<-----금일 update 완료------------------------------>
+2021-06-08
+<-----환율 업데이트중-------------------------------->
+<-----firebase 1차 갱신중----------------------------->
+<-----firebase 1차 갱신완료-------------------------->
+<-----환율 업데이트 완료---------------------------->
+<-----안드로이드차트용 kospi지수 갱신중----------->
+<-----안드로이드차트용 kospi지수 갱신완료--------->
+Traceback (most recent call last):
+  File "scheduler.py", line 164, in <module>
+    schedule.run_pending()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/schedule/__init__.py", line 780, in run_pending
+    default_scheduler.run_pending()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/schedule/__init__.py", line 100, in run_pending
+    self._run_job(job)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/schedule/__init__.py", line 172, in _run_job
+    ret = job.run()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/schedule/__init__.py", line 661, in run
+    ret = self.job_func()
+  File "scheduler.py", line 80, in crawlingDBupdate
+    if(isHoliday.isholiday(day) or isHoliday.isweekend(day)): ## 공휴일,주말이면 data갱신 안함 ##
+  File "/home/ubuntu/model/isHoliday.py", line 25, in isholiday
+    ecosRoot = ET.fromstring(contents)
+  File "/usr/lib/python3.6/xml/etree/ElementTree.py", line 1314, in XML
+    parser.feed(text)
+xml.etree.ElementTree.ParseError: not well-formed (invalid token): line 1, column 168
+------------------------------------------------------------------------------
+<-----crawling.py import complete------------------>
+<-----isHoliday.py import complete----------------->
+<-----use_ecos.py import complete----------------->
+<-----fb_dailyupdate.py import complete----------->
+<-----firebase 권한획득완료-------------------------->
+<-----kospidetail.py import complete--------------->
+<-----model.py import complete----------->
+<-----All File import complete------------------------------->
+2021-06-09
+Traceback (most recent call last):
+  File "scheduler.py", line 165, in <module>
+    time.sleep(1)
+KeyboardInterrupt
+------------------------------------------------------------------------------
+<-----crawling.py import complete------------------>
+<-----isHoliday.py import complete----------------->
+<-----use_ecos.py import complete----------------->
+<-----fb_dailyupdate.py import complete----------->
+<-----firebase 권한획득완료-------------------------->
+<-----kospidetail.py import complete--------------->
+<-----model.py import complete----------->
+<-----All File import complete------------------------------->
+2021-06-09
+Traceback (most recent call last):
+  File "scheduler.py", line 165, in <module>
+    time.sleep(1)
+KeyboardInterrupt
+------------------------------------------------------------------------------
+<-----crawling.py import complete------------------>
+<-----isHoliday.py import complete----------------->
+<-----use_ecos.py import complete----------------->
+<-----fb_dailyupdate.py import complete----------->
+<-----firebase 권한획득완료-------------------------->
+<-----kospidetail.py import complete--------------->
+<-----model.py import complete----------->
+<-----All File import complete------------------------------->
+2021-06-09
+2021-06-09
+<-----환율 업데이트중-------------------------------->
+<-----firebase 1차 갱신중----------------------------->
+<-----firebase 1차 갱신완료-------------------------->
+<-----환율 업데이트 완료---------------------------->
+<-----안드로이드차트용 kospi지수 갱신중----------->
+<-----안드로이드차트용 kospi지수 갱신완료--------->
+------------------------------------------------------------------------------
+<-----crawling.py import complete------------------>
+<-----isHoliday.py import complete----------------->
+<-----use_ecos.py import complete----------------->
+<-----fb_dailyupdate.py import complete----------->
+<-----firebase 권한획득완료-------------------------->
+<-----kospidetail.py import complete--------------->
+<-----model.py import complete----------->
+<-----All File import complete------------------------------->
+2021-06-09
+<-----시고저종거래량 업데이트중------------------->
+<-----대비,등락률 업데이트중------------------------>
+<-----순매수 업데이트중----------------------------->
+<-----각국 지수 업데이트중-------------------------->
+<-----유가 업데이트중-------------------------------->
+<-----firebase 2차 갱신중----------------------------->
+<-----firebase 2차 갱신완료--------------------------->
+<-----금일 update 완료------------------------------>
+------------------------------------------------------------------------------
+<-----crawling.py import complete------------------>
+<-----isHoliday.py import complete----------------->
+<-----use_ecos.py import complete----------------->
+<-----fb_dailyupdate.py import complete----------->
+<-----firebase 권한획득완료-------------------------->
+<-----kospidetail.py import complete--------------->
+<-----model.py import complete----------->
+<-----All File import complete------------------------------->
+2021-06-10
+2021-06-10
+<-----환율 업데이트중-------------------------------->
+<-----firebase 1차 갱신중----------------------------->
+<-----firebase 1차 갱신완료-------------------------->
+<-----환율 업데이트 완료---------------------------->
+<-----안드로이드차트용 kospi지수 갱신중----------->
+<-----안드로이드차트용 kospi지수 갱신완료--------->
+<-----시고저종거래량 업데이트중------------------->
+<-----대비,등락률 업데이트중------------------------>
+Traceback (most recent call last):
+  File "scheduler.py", line 171, in <module>
+    schedule.run_pending()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/schedule/__init__.py", line 780, in run_pending
+    default_scheduler.run_pending()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/schedule/__init__.py", line 100, in run_pending
+    self._run_job(job)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/schedule/__init__.py", line 172, in _run_job
+    ret = job.run()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/schedule/__init__.py", line 661, in run
+    ret = self.job_func()
+  File "scheduler.py", line 91, in crawlingDBupdate
+    daebi,updown = kospidaebiupdown_update()
+  File "scheduler.py", line 21, in kospidaebiupdown_update
+    return crawling.get_kospi_daebiupdown()
+  File "/home/ubuntu/model/crawling.py", line 21, in get_kospi_daebiupdown
+    updown = soup.select("img")[0]['art']
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/bs4/element.py", line 1406, in __getitem__
+    return self.attrs[key]
+KeyError: 'art'
+------------------------------------------------------------------------------
+<-----crawling.py import complete------------------>
+<-----isHoliday.py import complete----------------->
+<-----use_ecos.py import complete----------------->
+<-----fb_dailyupdate.py import complete----------->
+<-----firebase 권한획득완료-------------------------->
+<-----kospidetail.py import complete--------------->
+<-----model.py import complete----------->
+<-----All File import complete------------------------------->
+2021-06-11
+<-----시고저종거래량 업데이트중------------------->
+<-----대비,등락률 업데이트중------------------------>
+<-----순매수 업데이트중----------------------------->
+Traceback (most recent call last):
+  File "scheduler.py", line 146, in <module>
+    crawlingDBupdate()
+  File "scheduler.py", line 95, in crawlingDBupdate
+    association,foreign,person,pension = kospitrading_update()
+  File "scheduler.py", line 27, in kospitrading_update
+    return kospidetail.get_trading_value()
+  File "/home/ubuntu/model/kospidetail.py", line 19, in get_trading_value
+    df = stock.get_market_trading_value_by_date(day, day, "KOSPI")
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pykrx/stock/api.py", line 687, in get_market_trading_value_by_date
+    on, detail)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pykrx/website/comm/util.py", line 7, in wrapper
+    return func(*args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pykrx/website/krx/market/wrap.py", line 491, in get_market_trading_value_and_volume_on_market_by_date
+    df.columns = ['날짜', '기관합계', '기타법인', '개인', '외국인합계', '전체']
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pandas/core/generic.py", line 5154, in __setattr__
+    return object.__setattr__(self, name, value)
+  File "pandas/_libs/properties.pyx", line 66, in pandas._libs.properties.AxisProperty.__set__
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pandas/core/generic.py", line 564, in _set_axis
+    self._mgr.set_axis(axis, labels)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pandas/core/internals/managers.py", line 227, in set_axis
+    f"Length mismatch: Expected axis has {old_len} elements, new "
+ValueError: Length mismatch: Expected axis has 0 elements, new values have 6 elements
+------------------------------------------------------------------------------
+<-----crawling.py import complete------------------>
+<-----isHoliday.py import complete----------------->
+<-----use_ecos.py import complete----------------->
+<-----fb_dailyupdate.py import complete----------->
+<-----firebase 권한획득완료-------------------------->
+<-----kospidetail.py import complete--------------->
+<-----model.py import complete----------->
+<-----All File import complete------------------------------->
+2021-06-11
+2021-06-11
+<-----환율 업데이트중-------------------------------->
+ERROR-600 : DB Connection 오류입니다.
+ OpenAPI 호출시 서버에서 DB접속 오류가 발생했습니다.
+<-----firebase 1차 갱신중----------------------------->
+<-----firebase 1차 갱신완료-------------------------->
+<-----환율 업데이트 완료---------------------------->
+<-----안드로이드차트용 kospi지수 갱신중----------->
+<-----안드로이드차트용 kospi지수 갱신완료--------->
+<-----시고저종거래량 업데이트중------------------->
+<-----대비,등락률 업데이트중------------------------>
+<-----순매수 업데이트중----------------------------->
+<-----각국 지수 업데이트중-------------------------->
+<-----유가 업데이트중-------------------------------->
+<-----firebase 2차 갱신중----------------------------->
+<-----firebase 2차 갱신완료--------------------------->
+<-----금일 update 완료------------------------------>
+Traceback (most recent call last):
+  File "scheduler.py", line 172, in <module>
+    schedule.run_pending()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/schedule/__init__.py", line 780, in run_pending
+    default_scheduler.run_pending()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/schedule/__init__.py", line 100, in run_pending
+    self._run_job(job)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/schedule/__init__.py", line 172, in _run_job
+    ret = job.run()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/schedule/__init__.py", line 661, in run
+    ret = self.job_func()
+  File "scheduler.py", line 132, in runmodel
+    data = fb.make_data()
+  File "/home/ubuntu/model/fb.py", line 87, in make_data
+    'won/US dollar' : [float(data_dic[key][17]) for key in data_keylist],
+  File "/home/ubuntu/model/fb.py", line 87, in <listcomp>
+    'won/US dollar' : [float(data_dic[key][17]) for key in data_keylist],
+ValueError: could not convert string to float: 'None'
+------------------------------------------------------------------------------
+<-----crawling.py import complete------------------>
+<-----isHoliday.py import complete----------------->
+<-----use_ecos.py import complete----------------->
+<-----fb_dailyupdate.py import complete----------->
+<-----firebase 권한획득완료-------------------------->
+<-----kospidetail.py import complete--------------->
+<-----model.py import complete----------->
+<-----All File import complete------------------------------->
+2021-06-17
+Traceback (most recent call last):
+  File "scheduler.py", line 174, in <module>
+    time.sleep(1)
+KeyboardInterrupt
+------------------------------------------------------------------------------
+<-----crawling.py import complete------------------>
+<-----isHoliday.py import complete----------------->
+<-----use_ecos.py import complete----------------->
+<-----fb_dailyupdate.py import complete----------->
+<-----firebase 권한획득완료-------------------------->
+<-----kospidetail.py import complete--------------->
+<-----model.py import complete----------->
+<-----All File import complete------------------------------->
+2021-06-17
+<-----안드로이드차트용 kospi지수 갱신중----------->
+<-----안드로이드차트용 kospi지수 갱신완료--------->
+<-----시고저종거래량 업데이트중------------------->
+<-----대비,등락률 업데이트중------------------------>
+<-----순매수 업데이트중----------------------------->
+<-----각국 지수 업데이트중-------------------------->
+<-----유가 업데이트중-------------------------------->
+<-----firebase 2차 갱신중----------------------------->
+<-----firebase 2차 갱신완료--------------------------->
+<-----금일 update 완료------------------------------>
+2021-06-18
+<-----환율 업데이트중-------------------------------->
+<-----firebase 1차 갱신중----------------------------->
+<-----firebase 1차 갱신완료-------------------------->
+<-----환율 업데이트 완료---------------------------->
+<-----안드로이드차트용 kospi지수 갱신중----------->
+<-----안드로이드차트용 kospi지수 갱신완료--------->
+<-----시고저종거래량 업데이트중------------------->
+<-----대비,등락률 업데이트중------------------------>
+<-----순매수 업데이트중----------------------------->
+<-----각국 지수 업데이트중-------------------------->
+<-----유가 업데이트중-------------------------------->
+<-----firebase 2차 갱신중----------------------------->
+<-----firebase 2차 갱신완료--------------------------->
+<-----금일 update 완료------------------------------>
+<-----dataset 완료------------------------------>
+2021-06-19 03:00:02.549252: I tensorflow/compiler/jit/xla_cpu_device.cc:41] Not creating XLA devices, tf_xla_enable_xla_devices not set
+model 불러오기 완료
+2021-06-19 03:00:03.561778: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:116] None of the MLIR optimization passes are enabled (registered 2)
+2021-06-19 03:00:03.577334: I tensorflow/core/platform/profile_utils/cpu_utils.cc:112] CPU Frequency: 2300080000 Hz
+/home/ubuntu/.local/lib/python3.6/site-packages/pandas/core/indexing.py:670: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  iloc._setitem_with_indexer(indexer, value)
+/home/ubuntu/model/model.py:80: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df['after4days_close'].iloc[i+20] = my_final_y_pred[0][0]
+함수실행
+어제 코스피 값은  3267.93
+예측한 5일 후의 코스피 값은 3194.5857
+<-----modelrun 완료------------------------------>
+2021-06-21
+<-----환율 업데이트중-------------------------------->
+<-----firebase 1차 갱신중----------------------------->
+<-----firebase 1차 갱신완료-------------------------->
+<-----환율 업데이트 완료---------------------------->
+<-----안드로이드차트용 kospi지수 갱신중----------->
+<-----안드로이드차트용 kospi지수 갱신완료--------->
+<-----시고저종거래량 업데이트중------------------->
+<-----대비,등락률 업데이트중------------------------>
+<-----순매수 업데이트중----------------------------->
+<-----각국 지수 업데이트중-------------------------->
+<-----유가 업데이트중-------------------------------->
+<-----firebase 2차 갱신중----------------------------->
+<-----firebase 2차 갱신완료--------------------------->
+<-----금일 update 완료------------------------------>
+2021-06-22
+<-----환율 업데이트중-------------------------------->
+<-----firebase 1차 갱신중----------------------------->
+<-----firebase 1차 갱신완료-------------------------->
+<-----환율 업데이트 완료---------------------------->
+<-----안드로이드차트용 kospi지수 갱신중----------->
+<-----안드로이드차트용 kospi지수 갱신완료--------->
+<-----시고저종거래량 업데이트중------------------->
+<-----대비,등락률 업데이트중------------------------>
+<-----순매수 업데이트중----------------------------->
+<-----각국 지수 업데이트중-------------------------->
+<-----유가 업데이트중-------------------------------->
+<-----firebase 2차 갱신중----------------------------->
+<-----firebase 2차 갱신완료--------------------------->
+<-----금일 update 완료------------------------------>
+2021-06-23
+<-----환율 업데이트중-------------------------------->
+<-----firebase 1차 갱신중----------------------------->
+<-----firebase 1차 갱신완료-------------------------->
+<-----환율 업데이트 완료---------------------------->
+<-----안드로이드차트용 kospi지수 갱신중----------->
+<-----안드로이드차트용 kospi지수 갱신완료--------->
+<-----시고저종거래량 업데이트중------------------->
+<-----대비,등락률 업데이트중------------------------>
+<-----순매수 업데이트중----------------------------->
+<-----각국 지수 업데이트중-------------------------->
+<-----유가 업데이트중-------------------------------->
+<-----firebase 2차 갱신중----------------------------->
+<-----firebase 2차 갱신완료--------------------------->
+<-----금일 update 완료------------------------------>
+2021-06-24
+<-----환율 업데이트중-------------------------------->
+<-----firebase 1차 갱신중----------------------------->
+<-----firebase 1차 갱신완료-------------------------->
+<-----환율 업데이트 완료---------------------------->
+<-----안드로이드차트용 kospi지수 갱신중----------->
+<-----안드로이드차트용 kospi지수 갱신완료--------->
+<-----시고저종거래량 업데이트중------------------->
+<-----대비,등락률 업데이트중------------------------>
+<-----순매수 업데이트중----------------------------->
+<-----각국 지수 업데이트중-------------------------->
+<-----유가 업데이트중-------------------------------->
+<-----firebase 2차 갱신중----------------------------->
+<-----firebase 2차 갱신완료--------------------------->
+<-----금일 update 완료------------------------------>
+2021-06-25
+<-----환율 업데이트중-------------------------------->
+<-----firebase 1차 갱신중----------------------------->
+<-----firebase 1차 갱신완료-------------------------->
+<-----환율 업데이트 완료---------------------------->
+<-----안드로이드차트용 kospi지수 갱신중----------->
+<-----안드로이드차트용 kospi지수 갱신완료--------->
+<-----시고저종거래량 업데이트중------------------->
+Traceback (most recent call last):
+  File "scheduler.py", line 172, in <module>
+    while True:
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/schedule/__init__.py", line 780, in run_pending
+    default_scheduler.run_pending()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/schedule/__init__.py", line 100, in run_pending
+    self._run_job(job)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/schedule/__init__.py", line 172, in _run_job
+    ret = job.run()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/schedule/__init__.py", line 661, in run
+    ret = self.job_func()
+  File "scheduler.py", line 87, in crawlingDBupdate
+    open,high,low,close,volume = kospidetail_update()
+  File "scheduler.py", line 24, in kospidetail_update
+    return kospidetail.get_kospi_detail()
+  File "/home/ubuntu/model/kospidetail.py", line 9, in get_kospi_detail
+    df = stock.get_index_ohlcv_by_date(day, day, "1001")
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pykrx/stock/api.py", line 902, in get_index_ohlcv_by_date
+    df = krx.get_index_ohlcv_by_date(fromdate, todate, ticker)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pykrx/website/comm/util.py", line 7, in wrapper
+    return func(*args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pykrx/website/krx/market/wrap.py", line 615, in get_index_ohlcv_by_date
+    df = 개별지수시세().fetch(ticker[1:], ticker[0], fromdate, todate)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pykrx/website/krx/market/core.py", line 555, in fetch
+    result = self.read(indIdx2=ticker, indIdx=group_id, strtDd=fromdate, endDd=todate)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/pykrx/website/krx/krxio.py", line 10, in read
+    return resp.json()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/requests/models.py", line 900, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/lib/python3.6/json/__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.6/json/decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.6/json/decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
